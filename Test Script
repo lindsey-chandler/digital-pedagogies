@@ -1,0 +1,21 @@
+#### R Test Script 
+
+# To run a line, select line of code and press CMD + ENTER
+
+# Test output print line
+print("Hello World!")
+
+# Test mathematical function 
+mean(c(2, 3, 4, 5, 6))
+
+# Test data loading
+data(mtcars)
+summary(mtcars)
+print("I am Emilee, Hello")
+
+# Code setup in R
+#   Everything has to have a command (minus basic math) 
+#   print, mean, data, summary, all followed by parentheses () which contain arguments
+
+View(mtcars)
+hist(mtcars$cyl) #histogram function(dataframe name$cyl)
