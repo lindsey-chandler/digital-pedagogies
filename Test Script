@@ -4,28 +4,79 @@
 ### Author: Lindsey Chandler, Ph.D. (lchandler@psu.edu)
 
 ### Description
-### This script was created as a testing ground for the VS Code / Live Share capabilities which can permit students and others to collaborate on coding-based projects. The code and the data in this script are meaning to be simple in nature, easy to annotate, follow, and commit so that anyone who uses this repository can run these lines of code on their VS Code or other code execution system (in this case, R or R Studio). 
+### This script was created as a testing ground for the VS Code / Live Share capabilities which can permit students and others to collaborate on coding-based projects. The code and the data in this script are meaning to be simple in nature, easy to annotate, follow, and commit so that anyone who uses this repository can run these lines of code on their VS Code or other code execution system (in this case, R or R Studio).  # nolint: line_length_linter.
 
-### Testing Space 
+### Testing Space
 
 # Essential coding information: 
 #   To run a line, select line of code and press CMD + ENTER
-#   To annotate code, use the hashtag or pound symbol (#) at the start of the line. This line will not affect the output of code itself. 
+#   To annotate code, use the hashtag or pound symbol (#) at the start of the line. This line will not affect the output of code itself.  # nolint: line_length_linter.
 
 # Test running a command from a pre-built script using this print command
 print("Hello World!")
 
-# Test running a command from a pre-built script using this mathematical function 
+# Test running a command from a pre-built script using this mathematical function # nolint: line_length_linter.
 mean(c(2, 3, 4, 5, 6))
 
-# Test data loading
-data(mtcars)
-summary(mtcars)
-print("I am Emilee, Hello")
+sum(c(2, 3, 4, 5, 6, 7))
 
-# Code setup in R
+# Test code setup in R
 #   Everything has to have a command (minus basic math) 
-#   print, mean, data, summary, all followed by parentheses () which contain arguments
+#   print, mean, data, summary, all followed by parentheses () which contain arguments # nolint: line_length_linter.
 
-View(mtcars)
-hist(mtcars$cyl) #histogram function(dataframe name$cyl)
+# Load necessary library
+# The dataset 'mtcars' is included in the 'datasets' package which is part of base R # nolint: line_length_linter.
+library(datasets)
+
+# Load the mtcars dataset
+data("mtcars")
+
+# View the first few rows of the dataset
+# head() shows the first 6 rows by default
+head(mtcars)
+
+# View the structure of the dataset
+# str() provides a compact, internal structure of the dataset
+str(mtcars)
+
+# Summary of the dataset
+# summary() gives a statistical summary for each column in the dataset
+summary(mtcars)
+
+# Viewing column names
+# colnames() returns the names of the columns in the dataset
+colnames(mtcars)
+
+# Viewing row names
+# rownames() returns the names of the rows in the dataset
+rownames(mtcars)
+
+# Basic plotting: Scatter plot of mpg (miles per gallon) vs hp (horsepower)
+# plot() is a generic function for plotting R objects
+plot(mtcars$hp, mtcars$mpg, 
+     main="Scatter Plot of Horsepower vs. MPG", 
+     xlab="Horsepower", 
+     ylab="Miles Per Gallon", 
+     pch=19, 
+     col="blue")
+
+# Basic plotting: Histogram of mpg (miles per gallon)
+# hist() creates a histogram for a single variable
+hist(mtcars$mpg, 
+     main="Histogram of Miles Per Gallon", 
+     xlab="Miles Per Gallon", 
+     col="orange", 
+     border="black")
+
+# Basic plotting: Boxplot of mpg (miles per gallon)
+# boxplot() creates a box-and-whisker plot
+boxplot(mtcars$mpg, 
+        main="Boxplot of Miles Per Gallon", 
+        ylab="Miles Per Gallon", 
+        col="green")
+
+# Basic plotting: Pair plot of the dataset
+# pairs() creates a matrix of scatter plots for each pair of variables
+pairs(mtcars, 
+      main="Pair Plot of mtcars Dataset", 
+      col="purple")
