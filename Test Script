@@ -1,11 +1,21 @@
 #### R Test Script 
+### Created 19 July 2024
+### Last Updated 23 July 2024
+### Author: Lindsey Chandler, Ph.D. (lchandler@psu.edu)
 
-# To run a line, select line of code and press CMD + ENTER
+### Description
+### This script was created as a testing ground for the VS Code / Live Share capabilities which can permit students and others to collaborate on coding-based projects. The code and the data in this script are meaning to be simple in nature, easy to annotate, follow, and commit so that anyone who uses this repository can run these lines of code on their VS Code or other code execution system (in this case, R or R Studio). 
 
-# Test output print line
+### Testing Space 
+
+# Essential coding information: 
+#   To run a line, select line of code and press CMD + ENTER
+#   To annotate code, use the hashtag or pound symbol (#) at the start of the line. This line will not affect the output of code itself. 
+
+# Test running a command from a pre-built script using this print command
 print("Hello World!")
 
-# Test mathematical function 
+# Test running a command from a pre-built script using this mathematical function 
 mean(c(2, 3, 4, 5, 6))
 
 # Test data loading
